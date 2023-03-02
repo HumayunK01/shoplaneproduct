@@ -18,6 +18,17 @@ var productData = {
   price: 2599,
 };
 
+const prodInfo = document.querySelector(".products-info");
+let outputmain = "";
+outputmain = `<h1 id="name">${productData.name}</h1>
+              <h4 id="brand">${productData.brand}</h4>
+              <h3>Price: Rs <span id="price">${productData.price}</span></h3>
+              <div class="description">
+                  <h3>Description</h3>
+                  <p id="description">${productData.description}</p>
+              </div>`;
+prodInfo.innerHTML = outputmain;
+
 const lists = document.getElementById("lists");
 const outputImg = document.getElementById("outputImg");
 
@@ -37,10 +48,10 @@ for (let i = 0; i < pics.length; i++) {
 lists.innerHTML = output;
 
 lists.addEventListener("click", (e) => {
-  let targetSrc = e.target.getAttribute('src');
-  outputImg.setAttribute('src', targetSrc);
+  let targetSrc = e.target.getAttribute("src");
+  outputImg.setAttribute("src", targetSrc);
 
   let activeImg = document.querySelector("img.active");
-  activeImg.classList.remove('active');
-  e.target.classList.add('active');
+  activeImg.classList.remove("active");
+  e.target.classList.add("active");
 });
