@@ -1,35 +1,232 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-.lists{
+/* --------- NAVBAR SECTION STARTS --------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 25px 100px;
+  box-shadow: 2px 4px 2px rgb(17 16 16 / 50%);
+  z-index: 100;
+}
+
+nav .logo a h4 {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+nav .logo a h4 span {
+  color: #009688;
+  letter-spacing: 1px;
+}
+
+nav .menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  user-select: none;
+}
+
+nav .menu ul li {
+  display: inline-block;
+  margin-left: 40px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+nav .menu ul li:hover {
+  color: #009688;
+}
+
+nav .icons {
+  user-select: none;
+}
+
+nav .icons a {
+  color: #000000;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 25px;
+  }
+  nav .logo a h4 {
+    font-size: 20px;
+  }
+  nav .menu {
+    display: none;
+  }
+  nav .icons a {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+}
+
+/* --------- NAVBAR SECTION ENDS --------- */
+
+
+/* --------- PRODUCT SECTION STARTS --------- */
+.product {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
     display: flex;
+    flex-wrap: wrap;
+}
+.right-column {
+    width: 60%;
+    margin-top: 40px;
+    padding-left: 30px;
+}
+.left-column {
+    width: 40%;
+}
+
+.left-column img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.product-description {
+    margin-bottom: 40px;
+}
+
+.product-description h1 {
+    font-weight: 400;
+    font-size: 44px;
+    letter-spacing: -2px;
+}
+
+.product-description h4 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.product-description h3 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+}
+
+.product-description h3 span {
+    color: #009688;
+    font-weight: bold;
+}
+
+.product-description p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #86939e;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
 }
 
 .lists .item {
-    margin: 10px;  
+    margin: 5px;
+    width: 15%;
+    height: 30%;
     cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
 }
 
 .lists .item.active {
-    border: 2px solid #000;
-}
-
-.lists .item:hover {
-    opacity: .8;
+    border: 2px solid #009688;
 }
 
 .lists .item {
-    width: 100px;
+  width: 100px;
 }
 
 .ouput-outer img {
-    width: 400px;
+  width: 400px;
 }
+
+.btn button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+}
+/* --------- PRODUCT SECTION ENDS --------- */
+
+
+/* --------- FOOTER SECTION STARTS --------- */
+footer {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 30px 0 40px 0;
+}
+
+footer h3 {
+  color: #dcdcdc;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer ul li {
+  text-decoration: none;
+  color: #b8b8b8;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+footer ul li:hover {
+  color: #009688;
+}
+
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .foot1,
+  .foot2,
+  .foot3 {
+    margin-bottom: 30px;
+  }
+}
+
+/* --------- FOOTER SECTION ENDS --------- */
