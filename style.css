@@ -197,9 +197,11 @@ nav .icons a {
   .right-column {
     width: auto;
     padding-left: 0;
+    margin-top: 10px;
   }
   .product-description h1 {
     font-size: 30px;
+    letter-spacing: 0;
   }
   .product-description h4 {
     font-size: 14px;
